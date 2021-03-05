@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="./css/style.css"> 
+	<script>
+
+		var answer = parseInt(Math.random() * 100);
+		var answer2 = parseInt(Math.random() * 100);
+
+		var tryCount = 0;
+		var maxTryCount = 1;
+
+		function readInt(){
+			var number = document.getElementById("userFirstAnswer").value;
+			return parseInt(number);
+			return +document.getElementById("userFirstAnswer").value;
+		}
+
+		function readIntt(){
+			var number = document.getElementById("userSecondAnswer").value;
+			return parseInt(number);
+			return +document.getElementById("userSecondAnswer").value;
+		}
+
+		function write(text){
+			document.getElementById("info").innerHTML = text;
+		}
+
+		function write(text){
+			document.getElementById("info2").innerHTML = text;
+		}
+
+		function hide(id){
+			document.getElementById(id).style.display = "none";
+		}
+
+		function guess(){
+			tryCount++;
+
+			var userFirstAnswer = readInt();
+
+			if(userFirstAnswer == answer){
+				write("<b>Поздравляю, вы угадали!</b>");
+				hide("button");
+				hide("userFirstAnswer");
+			} else if(tryCount >= maxTryCount){
+				write("Вы проиграли<br>Правильный ответ: " + answer);
+				hide("button");
+				hide("info");
+				hide("userFirstAnswer");
+			} else if(userFirstAnswer > answer){
+				write("Вы ввели слишком большие числа<br>Попробуйте еще раз. Введите число от 1 до 100");
+			} else if(userFirstAnswer < answer){
+				write("Вы ввели слишком маленькие числа<br>Попробуйте еще раз. Введите число от 1 до 100");				
+			}
+
+		}
+
+		function guesss(){
+			tryCount++;
+
+			var userSecondAnswer = readIntt();
+
+			if(userSecondAnswer == answer2){
+				write("<b>Поздравляю, вы угадали!</b>");
+				hide("button2");
+				hide("userSecondAnswer");
+			} else if(tryCount >= maxTryCount){
+				write("Вы Оба проиграли<br>Правильный ответ: " + answer2);
+				hide("button2");
+				hide("userSecondAnswer");
+				hide("info");
+			} else if(userSecondAnswer > answer2){
+				write("Вы ввели слишком большое число<br>Попробуйте еще раз. Введите число от 1 до 100");
+			} else if(userSecondAnswer < answer2){
+				write("Вы ввели слишком маленькое число<br>Попробуйте еще раз. Введите число от 1 до 100");				
+			}
+		}
+
+	</script>
+
+</head>
+<body>
+
+<div class="content">
+	<div class="header">
+		<a href="index.html">Главная</a>
+		<a href="puzzle.html">Загадки</a>
+		<a href="#">Угадайка</a>
+		<a href="generetion.html">Генератор</a>
+		<a href="./porno.html">Порно</a>
+
+	</div>
+
+	<div class="contentWrap">
+		<div class="content">
+			<div class="center">
+
+				<h1>Игра угадайка</h1>
+
+				<div class="box">
+					<div class="box2">
+						<p id="info">Игрок первый Угадайте число от 0 до 100</p>
+						<input type="text" id="userFirstAnswer">
+						<br>
+						<a href="#" onClick="guess();" id="button">Начать</a>
+					</div>
+				
+					<div class="box2">
+						<p id="info2"> Игрок второй Угадайте число от 0 до 100</p>
+						<input type="text" id="userSecondAnswer">
+						<br>
+						<a href="#" onClick="guesss();" id="button2">Начать</a>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+
+</div>
+<div class="footer">
+	Copyright &copy; Uasya Pupsik
+<div>
+
+
+</body>
+</html>

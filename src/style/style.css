@@ -1,0 +1,230 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif; }
+
+.header {
+  min-width: 1300px;
+  border-bottom: 1px solid #b5b7ba;
+  background-color: #dfdfdf;
+  margin: 0 auto;
+  height: 50px;
+  text-align: center;
+  padding-top: 18px; }
+
+.header .selected {
+  color: #000; }
+
+.center {
+  width: 1300px;
+  margin: 0 auto; }
+
+.header a {
+  color: #4d4d4d;
+  font-size: 20px;
+  font-weight: 100;
+  text-align: left;
+  text-decoration: none;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  padding-right: 40px; }
+
+.header span {
+  padding: 0 38px; }
+
+.content {
+  min-width: 1300px;
+  margin: 0 auto;
+  min-height: calc(100vh - 140px); }
+
+.content h1 {
+  width: 100%;
+  float: left;
+  text-align: center;
+  color: #2e353d;
+  font-size: 40px;
+  font-weight: 300;
+  margin-top: 33px;
+  margin-bottom: 35px; }
+
+.content h3 {
+  color: #242424;
+  font-size: 35px;
+  font-weight: 300;
+  text-align: left;
+  margin-left: 41px;
+  margin-bottom: 52px; }
+
+.content h5 {
+  color: #242424;
+  font-size: 24px;
+  text-align: left; }
+
+.content .box_text {
+  width: 671px;
+  background-color: #ffffff;
+  float: right;
+  padding: 49px 48px 51px 76px;
+  margin-bottom: 100px; }
+
+.content .box_text p {
+  color: #242424;
+  font-size: 24px;
+  font-weight: 100;
+  text-align: left;
+  margin-bottom: 31px; }
+
+.content .box_text a {
+  color: #40678a;
+  font-size: 24px;
+  font-weight: 100;
+  text-align: center;
+  text-decoration: none;
+  padding-right: 30px; }
+
+.content .media {
+  margin-right: 0; }
+
+.content .box {
+  background-color: #ffffff;
+  width: 1238px;
+  min-height: 500px;
+  margin: 50px auto 0 auto;
+  padding-top: 37px;
+  padding-left: 38px;
+  padding-bottom: 100px; }
+
+.box2 {
+  display: block;
+  margin-bottom: 100px; }
+
+.content .box p {
+  color: #242424;
+  font-size: 24px;
+  font-weight: 100;
+  text-align: left;
+  margin-top: 37px;
+  margin-bottom: 30px; }
+
+.content .box input {
+  border: 1px solid #a0a0a0;
+  background-color: #f5f5f5;
+  width: 457px;
+  height: 34px;
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: 100;
+  margin-bottom: 12px; }
+
+.content .box a {
+  display: block;
+  float: left;
+  background-color: #8cbbd3;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 30px;
+  padding: 11px 51px; }
+
+.content .box a:hover {
+  background-color: #5ba1d3; }
+
+.footer {
+  /* # == id */
+  background-color: #434445;
+  width: 100%;
+  float: left;
+  height: 140px;
+  text-align: center;
+  color: #a4a4a4;
+  font-size: 20px;
+  font-weight: 100;
+  line-height: 140px; }
+
+.footer a {
+  color: inherit; }
+
+.subBox {
+  background-color: #ffffff;
+  width: 900px;
+  min-height: 500px;
+  margin: 50px auto 0 auto;
+  padding-top: 37px;
+  padding-left: 38px;
+  padding-bottom: 50px; }
+
+.subInput {
+  border: 1px solid #a0a0a0;
+  background-color: #f5f5f5;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  margin-bottom: 5px; }
+
+.input {
+  display: inline-block;
+  border: 1px solid #a0a0a0;
+  background-color: #f5f5f5;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  padding-left: 10px;
+  margin-bottom: 20px; }
+
+.password__generate {
+  list-style-type: none; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  margin-top: 30px;
+  font-weight: bold;
+  padding: 10px 32px;
+  background-color: #2196F3;
+  color: #FFFFFF;
+  border: #2196F3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  outline-style: none; }
+
+.btn:hover {
+  background: #000; }
+
+.porno {
+  display: block;
+  position: relative; }
+  .porno img {
+    margin: 0 auto;
+    width: 1400px; }
+  .porno span {
+    position: absolute;
+    font-size: 35px;
+    color: crimson;
+    font-weight: bold; }
+  .porno__btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px; }
+    .porno__btn button {
+      padding: 25px;
+      background-color: crimson;
+      border-radius: 25%;
+      color: #FFFFFF;
+      font-size: 25px;
+      font-weight: bold; }
+
+div > img .svg-img {
+  border-radius: 0; }

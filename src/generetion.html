@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="./css/style.css"> 
+</head>
+<body>
+    <div class="content">
+        <div class="header">
+            <a href="#">Главная</a>
+            <a href="puzzle.html">Загадки</a>
+            <a href="guess.html">Угадайка</a>
+            <a href="generetion.html">Генератор</a>
+		    <a href="./porno.html">Порно</a>
+        </div>
+
+        <div class="contentWrap">
+            <div class="content">
+                <div class="center">
+    
+                    <div class="subBox">
+                        <h1>Генератор паролей</h1>
+    
+                    <p>Укажите какие символы включать в пароль:</p>
+                    <ul class="password__generate">
+                        <li><input class="subInput" id="arr_num" type="checkbox" checked="checked"> Цифры</li>
+                        <li><input class="subInput" id="arr_en" type="checkbox" checked="checked"> Английский строчные буквы</li>
+                        <li><input class="subInput" id="arr_EN" type="checkbox"> Английский заглавные буквы</li>
+                        <li><input class="subInput" id="arr_symb" type="checkbox"> Спецсимволы</li>
+                    </ul>
+                    <p>Количество символов в пароле: <input class="input" id="passLenght" type="number" step="1" min="4" max="20" value="7"></p>
+                    <p>Сгенерированный пароль: <span id="result" style="color:red">k3slp35</span></p>
+                    <p><button class="btn" id="pass_start">Сгенерировать пароль</button></p>
+                    </div>			
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+            
+<script>
+let arr_num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let arr_en = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+let arr_EN = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+let arr_symb = ['!', '@', '#', '$', '%', '&', '?', '-', '+', '=', '~'];
+
+const compareRandom = () => Math.random() - 0.5;
+const randomInteger = (min, max) => Math.round(min - 0.5 + Math.random() * (max - min + 1));
+
+function generatePassword() {
+	let arr = [];
+	if (document.querySelector('#arr_num').checked) arr = arr.concat(arr_num);
+	if (document.querySelector('#arr_en').checked) arr = arr.concat(arr_en);
+	if (document.querySelector('#arr_EN').checked) arr = arr.concat(arr_EN);
+	if (document.querySelector('#arr_symb').checked) arr = arr.concat(arr_symb);
+
+	arr.sort(compareRandom);
+
+	let password = '';
+	let passLenght = document.querySelector('#passLenght').value;
+
+	for (let i = 0; i < passLenght; i++) {
+		password += arr[randomInteger(0, arr.length - 1)];
+	}
+
+	document.querySelector('#result').textContent = password;
+}
+
+document.querySelector('#pass_start').addEventListener('click', generatePassword);
+</script>
+                        
+<div class="stripe-loading-indicator loaded"><div class="stripe"></div><div class="stripe-loaded"></div></div><iframe name="ym-native-frame" title="ym-native-frame" frameborder="0" aria-hidden="true" style="opacity: 0 !important; width: 0px !important; height: 0px !important; position: absolute !important; left: 100% !important; bottom: 100% !important; border: 0px !important;"></iframe><table cellspacing="0" cellpadding="0" class="gstl_50 gssb_c" style="width: 433px; display: none; top: 90px; position: absolute; left: 495px;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table></body>
+<div class="footer">
+	Copyright &copy; Uasya Pupsik
+<div>
+
+</body>
+</html>
